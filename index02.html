@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #atas{
+        background-color: grey;
+        color: black;
+    }
+    table {
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <script>
+        let arrayn = []
+        let arrayw = []
+    
+        
+        while (true){
+            let inputn = prompt("masukan nama")
+            
+            if (inputn != "stop"){
+                let inputw = prompt("masukan warna (english)")
+                arrayn.push(inputn)
+                arrayw.push(inputw)
+
+            }
+            else {
+                var input3= prompt("masukan warna yang ingin di cari")
+                break;
+            }
+
+        }
+
+
+        document.write("<table cellspacing= '0' cellpadding= '0' border = '1'>")
+            document.write("<tr>")
+                document.write("<td id = 'atas'> Nama </td>")
+                document.write("<td id = 'atas'> Warna Kesukaan </td>")
+            document.write("</tr>")
+
+
+            for (i=0; i<arrayn.length; i++){
+                document.write("<tr>")
+                document.write("<td style='background-color: "+arrayw[i]+";'>" +arrayn[i]+"")
+                document.write("<td style='background-color: "+arrayw[i]+";'>" +arrayw[i]+"")
+                document.write("</tr>")
+            }
+            
+        document.write("</table>")  
+        let favorite = 0
+            for (i=0; i<=arrayw.length; i++){
+                 if (arrayw[i]==input3){
+                favorite++
+                }
+            }
+        
+         
+        
+        document.write("Terdapat "+favorite+" orang yang menyukai warna "+input3+"")
+    </script>
+</body>
+</html>

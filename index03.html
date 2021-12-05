@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name ="author" content="NathanJoshua 2172026">    
+    <title>Document</title>
+</head>
+<style>
+    body {
+        color: black;
+        text-align: center;
+        
+    }
+    .container{
+        width: 100%;
+        height: 126px;
+        border: 2px solid black;
+    
+    }
+    div{
+        width: 19.7%;
+        height: 24px;
+        display: inline-table;
+        border: 1px solid black;
+        
+    }
+
+</style>
+<body>
+    <div class = "container" >
+    <script>
+        
+        let input = parseInt(prompt("masukan jumlah obstacle"))
+        var isi = []
+       
+        for (i=0; i<25; i++){
+            document.write("<div id="+i+">"+i+"</div>")
+        
+        }   
+         
+         for (j=0; j<input; j++){
+          let random = Math.floor(Math.random()*24)
+         if (isi.includes(random)==true){
+            let random = Math.floor(Math.random()*24)
+         }
+
+         else {
+
+         isi.push(random)
+
+         document.getElementById(""+random+"").style.backgroundColor= '#964B00';
+            
+         }
+
+        
+    
+            
+            
+
+
+
+         }
+         
+        
+        console.log(isi)
+            
+         
+         
+         
+    
+    </script>
+    </div>
+</body>
+</html>

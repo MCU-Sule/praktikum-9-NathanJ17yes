@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name ="author" content="NathanJoshua 2172026">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 25px;
+    }
+    #bulet {
+        border-radius: 100%;
+        width: 45px;
+        height:45px;
+        background-color: cornflowerblue;
+        text-align: center;
+        display: inline-block;
+    }
+   #container {
+       margin-left: auto;
+       margin-right: auto;
+
+   }
+        
+    
+</style>
+<body>
+    
+        <script>
+        let input=parseInt(prompt("Masukan Angka NxN"))
+        let isian = input*input+1
+        function loop (){
+            for (i=input; i>0; i--){
+                isian = isian-1
+                document.write ("<div id='bulet'>"+isian+"</div>")    
+        }
+        }
+        document.write ("<div id='container' style = 'width: "+input*45+"px; height: "+input*45+"px;'>")
+        for (j=input; j>0; j--){
+                loop();
+        }
+       
+        </script>
+    
+    
+</body>
+</html>
